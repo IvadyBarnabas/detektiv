@@ -1,0 +1,172 @@
+
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detective - Murder Case</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- FŐMENÜ -->
+    <section id="menu" class="screen active">
+        <div class="menu-content">
+            <h1>DETECTIVE</h1>
+            <p>A MURDER MYSTERY GAME</p>
+            <button onclick="startGame()">NEW GAME</button>
+            <button onclick="exitGame()">EXIT</button>
+        </div>
+    </section>
+
+    <!-- STORY BEVEZETŐ -->
+    <section id="intro" class="screen">
+        <div class="intro-container">
+            <img id="introImage" src="" alt="Story image">
+            <div class="intro-controls">
+                <p id="introText"></p>
+                <button onclick="nextIntro()">NEXT</button>
+                <button onclick="skipIntro()">SKIP</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- RENDŐRSÉGI ŐRS -->
+    <section id="suspects" class="screen">
+        <div class="suspect-content">
+
+            <h1>POLICE STATION</h1>
+            <p>Hallgasd ki a gyanúsítottakat, és gyűjts információkat!</p>
+
+            <div class="suspect-list">
+
+                <div class="suspect" onclick="selectSuspect('jason')">
+                    <img src="jason.png" alt="Jason">
+                    <div class="suspect-info">
+                        <h2>Jason Voorhees</h2>
+                        <p>Kattints a kihallgatáshoz!</p>
+                    </div>
+                </div>
+
+                <div class="suspect" onclick="selectSuspect('art')">
+                    <img src="art.png" alt="Art">
+                    <div class="suspect-info">
+                        <h2>Art the Clown</h2>
+                        <p>Kattints a kihallgatáshoz!</p>
+                    </div>
+                </div>
+
+                <div class="suspect" onclick="selectSuspect('ghostface')">
+                    <img src="ghostface.png" alt="Ghostface">
+                    <div class="suspect-info">
+                        <h2>Ghostface</h2>
+                        <p>Kattints a kihallgatáshoz!</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="investigation-buttons">
+                <button onclick="openCrimeScene()">CRIME SCENE</button>
+                <button id="accuseButton" onclick="openAccusation()" disabled>
+                    ACCUSE A SUSPECT
+                </button>
+            </div>
+
+            <div class="progress">
+                <p id="progressText">Kihallgatások: 0/3 | Helyszín: nem vizsgálva</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- KIHALLGATÁS -->
+    <section id="interrogation" class="screen">
+        <div class="visual-novel">
+
+            <div class="character-stage">
+
+                <div class="character detective" id="detectiveCharacter">
+                    <img src="detective.png" alt="Detective">
+                    <p>DETECTIVE</p>
+                </div>
+
+                <div class="character suspect-character" id="suspectCharacter">
+                    <img id="interrogationImage" src="" alt="Suspect">
+                    <p id="interrogationName"></p>
+                </div>
+
+            </div>
+
+            <div class="dialogue-box">
+                <h3 id="speakerName">DETECTIVE</h3>
+                <p id="dialogueText"></p>
+
+                <button id="dialogueButton" onclick="nextDialogue()">
+                    NEXT
+                </button>
+
+                <div id="dialogueChoices" class="dialogue-choices"></div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- TETTHELY -->
+    <section id="crimeScene" class="screen">
+        <div class="crime-container">
+            <h1>CRIME SCENE</h1>
+
+            <img src="crime-scene.jpg"
+                 alt="Crime scene"
+                 class="crime-image">
+
+            <div class="crime-description">
+                <p>
+                    Ez az a helyszín, ahol megtalálták az áldozatot.
+                    Vizsgáld meg alaposan a képet!
+                </p>
+            </div>
+
+            <button onclick="returnToStation()">BACK TO STATION</button>
+        </div>
+    </section>
+
+    <!-- NYOMOZÁSI JELENTÉS -->
+    <section id="accusation" class="screen">
+        <div class="accusation-container">
+            <h1>INVESTIGATION REPORT</h1>
+            <p>Az összegyűjtött információk alapján válassz gyilkost!</p>
+
+            <div id="suspectReports" class="report-list"></div>
+
+            <button onclick="returnToStation()">BACK</button>
+        </div>
+    </section>
+
+    <!-- MEGERŐSÍTÉS -->
+    <section id="confirmation" class="screen">
+        <div class="confirmation-box">
+            <h1>FINAL DECISION</h1>
+            <p id="confirmationText"></p>
+            <p>Biztosan meg akarod vádolni?</p>
+
+            <button onclick="confirmChoice()">YES</button>
+            <button onclick="cancelChoice()">NO</button>
+        </div>
+    </section>
+
+    <!-- EREDMÉNY -->
+    <section id="result" class="screen">
+        <div class="result-content">
+            <h1 id="resultTitle"></h1>
+            <p id="resultText"></p>
+
+            <button onclick="restartGame()">PLAY AGAIN</button>
+            <button onclick="goToMenu()">MAIN MENU</button>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
