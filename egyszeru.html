@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <title>Detective Game</title>
+    <link rel="stylesheet" href="egyszeru.css">
+</head>
+<body>
+
+    <h1>DETECTIVE GAME</h1>
+
+    <div id="menu">
+        <h2>Who is the killer?</h2>
+        <button onclick="startGame()">NEW GAME</button>
+    </div>
+
+    <div id="game" style="display: none;">
+
+        <h2>Suspects</h2>
+
+        <div class="suspects">
+
+            <div class="suspect" onclick="selectSuspect('Jason')">
+                <img src="images/jason.png">
+                <h3>Jason Voorhees</h3>
+            </div>
+
+            <div class="suspect" onclick="selectSuspect('Art')">
+                <img src="images/art.png">
+                <h3>Art the Clown</h3>
+            </div>
+
+            <div class="suspect" onclick="selectSuspect('Ghostface')">
+                <img src="images/ghostface.png">
+                <h3>Ghostface</h3>
+            </div>
+
+        </div>
+
+        <div id="dialogue">
+            <p>Choose a suspect to interrogate!</p>
+        </div>
+
+        <button onclick="checkAnswer()">ACCUSE</button>
+
+    </div>
+
+    <div id="result" style="display: none;">
+        <h2 id="resultText"></h2>
+        <button onclick="location.reload()">PLAY AGAIN</button>
+    </div>
+
+    <script src="egyszeru.js"></script>
+
+</body>
+</html>

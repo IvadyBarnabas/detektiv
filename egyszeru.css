@@ -1,0 +1,56 @@
+
+body {
+    background-color: #171717;
+    color: white;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+h1 {
+    color: darkred;
+    font-size: 40px;
+}
+
+button {
+    background-color: darkred;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    cursor: pointer;
+    margin: 15px;
+}
+
+button:hover {
+    background-color: red;
+}
+
+.suspects {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.suspect {
+    background-color: #292929;
+    padding: 15px;
+    cursor: pointer;
+    width: 180px;
+}
+
+.suspect:hover {
+    background-color: #500000;
+}
+
+.suspect img {
+    width: 150px;
+    height: 200px;
+    object-fit: contain;
+}
+
+#dialogue {
+    background-color: #292929;
+    padding: 20px;
+    margin: 25px auto;
+    width: 60%;
+    min-height: 40px;
+}
