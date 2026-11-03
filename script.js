@@ -22,11 +22,11 @@ function showScreen(screenId) {
 
 const introSlides = [
     {
-        image: "images/intro1.jpg",
+        image: "introimage.png",
         text: "Egy átlagosnak induló éjszaka váratlan fordulatot vett. Egy holttestet találtak a város egyik elhagyatott épületében."
     },
     {
-        image: "images/intro2.jpg",
+        image: "helyszín.png",
         text: "A rendőrség három gyanúsítottat azonosított. Mindegyiküknek lehetett indítéka."
     },
     {
