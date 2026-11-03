@@ -22,15 +22,15 @@ function showScreen(screenId) {
 
 const introSlides = [
     {
-        image: "introimage.png",
+        image: "hatter.png",
         text: "Egy átlagosnak induló éjszaka váratlan fordulatot vett. Egy holttestet találtak a város egyik elhagyatott épületében."
     },
     {
-        image: "helyszín.png",
+        image: "hatter2.png",
         text: "A rendőrség három gyanúsítottat azonosított. Mindegyiküknek lehetett indítéka."
     },
     {
-        image: "images/intro3.jpg",
+        image: "nyomozo.png",
         text: "Te vagy az ügy nyomozója. A feladatod, hogy megtaláld a valódi gyilkost."
     }
 ];
@@ -76,7 +76,7 @@ const suspects = {
 
     jason: {
         name: "Jason Voorhees",
-        image: "jason.png",
+        image: "jason2.png",
         killer: false,
 
         information: "Jason a gyilkosság estéjén a város szélén tartózkodott. Egy szemtanú az épület közelében látta, de a helyszínen talált cipőnyomok nem egyeznek az övéivel.",
@@ -126,7 +126,7 @@ const suspects = {
 
     art: {
         name: "Art the Clown",
-        image: "art.png",
+        image: "art2.png",
         killer: false,
 
         information: "Art az áldozat lakóhelyének közelében tartózkodott. Nem találtak nála közvetlen bizonyítékot. Egy szemtanú szerint azonban a gyilkosság idején máshol volt.",
@@ -176,7 +176,7 @@ const suspects = {
 
     ghostface: {
         name: "Ghostface",
-        image: "ghostface.png",
+        image: "ghostface2.png",
         killer: true,
 
         information: "Ghostface azt állította, hogy otthon tartózkodott a gyilkosság estéjén. Később azonban ellentmondásba keveredett önmagával. Először tagadta, hogy ismerte az áldozatot, majd utalt egy korábbi telefonbeszélgetésükre. A telefonhívások adatai alapján az egyik készülék a gyilkosság helyszínének közelében volt.",
@@ -626,7 +626,7 @@ function showWin() {
         "Sikerült megtalálnod a valódi gyilkost! Ghostface-et letartóztatták. Az ügyet lezárták.";
 
     document.getElementById("result").style.backgroundImage =
-        "url('images/win.jpg')";
+        "url('win.png')";
 }
 
 
@@ -646,7 +646,7 @@ function showGameOver() {
         "Rossz döntést hoztál! A valódi gyilkos, Ghostface megmenekült, és továbbra is szabadon van.";
 
     document.getElementById("result").style.backgroundImage =
-        "url('images/gameover.jpg')";
+        "url('gameover.png')";
 }
 
 

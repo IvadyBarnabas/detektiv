@@ -51,7 +51,7 @@ button:disabled {
 #menu {
     background:
         linear-gradient(#0009, #0009),
-        url("images/intro1.jpg") center/cover;
+        url("menu.png") center/cover;
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -104,7 +104,7 @@ button:disabled {
 #suspects {
     background:
         linear-gradient(#0009, #000c),
-        url("images/police-station.jpg") center/cover;
+        url("policestation.png") center/cover;
     justify-content: center;
     align-items: center;
 }
@@ -193,7 +193,7 @@ button:disabled {
 #interrogation {
     background:
         linear-gradient(#0008, #000b),
-        url("images/police-station.jpg") center/cover;
+        url("policestation.png") center/cover;
     justify-content: center;
     align-items: center;
 }
